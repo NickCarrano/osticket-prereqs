@@ -29,18 +29,43 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![image](https://github.com/user-attachments/assets/8851fadd-70c5-4d96-b119-d56f2088d73e)
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+- From our osTicket installation files we extract and copy the 'upload' folder to c:\inetpub\wwwroot
+
+- Within c:\inetpub\wwwroot we rename 'upload' to 'osTicket'
+
+- Then reload IIS
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![image](https://github.com/user-attachments/assets/b31ed481-61e9-4b7e-a580-2a1d23c92eab)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+- In IIS go to Sites -> Default -> osTicket
+
+- On the right, Click 'Browse *:80'
+
+- Notice that some plugins are not enabled by default
+
+- Back in IIS go to Sites -> Default -> osTicket, and open PHP Manager
+
+- Click 'Enable or disable an extension'
+
+    - Enable php_imap.dll
+
+    - Enable php_intl.dll
+
+    - Enable php_opcache.dll
+
+- Refresh the osTicket site in your browser and note that we have enabled these plugins
 </p>
 <br />
 
