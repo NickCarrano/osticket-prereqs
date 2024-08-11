@@ -66,13 +66,62 @@ This tutorial outlines the prerequisites and installation of the open-source hel
     - Enable php_opcache.dll
 
 - Refresh the osTicket site in your browser and note that we have enabled these plugins
+
+- Navigate to C:\inetpub\wwwroot\osTicket\include\
+
+    - Change the file name 'ost-sampleconfig.php' to 'ost-config.php'
+
+    - Change the permissions of 'ost-config.php' so that 'Everyone' has 'Full Control' permission
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![image](https://github.com/user-attachments/assets/4ff320fa-4836-4d08-b9aa-0fa6531184ce)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+- Download and install Heidi SQL
+
+    - Open Heidi SQL
+
+    - Create a new session using the same password used in MySQL
+
+    - Connect to the session
+
+    - Create a database called “osTicket”
 </p>
 <br />
+
+<p>
+
+![image](https://github.com/user-attachments/assets/b5d7e8ca-24a2-4131-8195-d236bc868877)
+
+</p>
+<p>
+
+- Continue Setting up osTicket in the browser (click Continue)
+
+    - Fill out the 'System Settings' and 'Admin User' Sections as needed
+
+- In the 'Database Settings' section:
+
+    - MySQL Database: osTicket
+
+    - MySQL Username: root
+
+    - MySQL Password: (The same password as MySQL and Heidi SQL)
+
+- Click 'Install Now'
+
+- If done correctly you can now browse to your help desk login page here: http://localhost/osTicket/scp/login.php
+
+    - And the end-user page here: http://localhost/osTicket/ 
+
+- Clean Up
+
+    - Delete: C:\inetpub\wwwroot\osTicket\setup
+
+    - Set Permissions to “Read” only: C:\inetpub\wwwroot\osTicket\include\ost-config.php
+
